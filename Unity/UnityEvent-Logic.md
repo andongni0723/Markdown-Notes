@@ -70,4 +70,15 @@ private void OnDisable()
 }
 ```
 
+
+
+## 在呼叫腳本內呼叫*Call函數*
+
+```csh
+CallEvent01(com1);
+```
+
+
+
 **這樣功能就完成了。**
+

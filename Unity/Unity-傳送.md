@@ -2,7 +2,7 @@
 
 ---
 
-![](../PNG/transition PNG/transition-show.gif)
+<img src="../PNG/transition PNG/transition-show.gif" style="zoom:200%;" />
 
 
 
@@ -12,13 +12,13 @@
 
 ## 新增 *Tansition Manager*
 
-![Add the "Tansition Manager"](https://drive.google.com/file/d/1KjSeUL47gw6KQBQyB2gHFDzeBmgVCsl7/view?usp=sharing)
+![Add the "Tansition Manager"](../PNG/transition PNG/transition1.png)
 
 
 
 ## 新增 *TansitionManager.cs*
 
-![Add the "TansitionManager.cs"](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition2.png)
+![Add the "TansitionManager.cs"](../PNG/transition PNG/transition2.png)
 
 ```c#
 using System.Collections;
@@ -57,7 +57,7 @@ namespace AnFarm.Transition
 
 
 
-![](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition3.png)  在 StartSceneName 填入開始遊戲的場景
+![](../PNG/transition PNG/transition3.png)  在 StartSceneName 填入開始遊戲的場景
 
 
 
@@ -88,13 +88,13 @@ namespace AnFarm.Transition
 
 ## 添加地圖*傳送點*
 
-![](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition4.png)
+![](../PNG/transition PNG/transition4.png)
 
 
 
 ## 新增*Teleport.cs* 並放在 *傳送點* 上
 
-![](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition6.png)
+![](../PNG/transition PNG/transition6.png)
 
 ## 編寫*Teleport.cs*
 
@@ -150,7 +150,7 @@ EventHandler.CallTransitionEvent(sceneToGo, positionToGo);
 
 ### 在 'PositionToGo'  中填上傳送後的位置
 
-![](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition7.png)
+![](../PNG/transition PNG/transition7.png)
 
 
 

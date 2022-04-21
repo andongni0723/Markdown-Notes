@@ -10,7 +10,7 @@
 
 ## 新增 *Tansition Manager*
 
-![Add the "Tansition Manager"](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition1.png)
+![Add the "Tansition Manager"](https://drive.google.com/file/d/1KjSeUL47gw6KQBQyB2gHFDzeBmgVCsl7/view?usp=sharing)
 
 
 

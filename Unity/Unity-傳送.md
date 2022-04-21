@@ -2,7 +2,9 @@
 
 ---
 
-![](D:\User_Andongni\Desktop\MD筆記\Markdown-Notes\PNG\transition PNG\transition-show.gif)
+![](../PNG/transition PNG/transition-show.gif)
+
+
 
 [toc]
 

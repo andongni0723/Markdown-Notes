@@ -5,19 +5,23 @@
 ---
 ## 流程圖
 
-
-```sequence
-Title: 卡牌系統
-客戶端->CardManager.cs: 按下按鈕
-CardManager.cs->CardManager.cs: AddCard()
-CardManager.cs->CardManager.cs: OnTransformChildrenChanged()
-CardManager.cs->CardManager.cs: ChangeCardPosition(int _childNum)
-CardManager.cs->其他腳本: EventHanlder.CallCardUpdeatePosition();
-CardManager.cs->BasicCard.cs: 
-BasicCard.cs->BasicCard.cs: 取得\n'CardManager.cs'的PosList[id]\n並將它設成坐標
-BasicCard.cs-->客戶端: UI
+### 大流程
+```mermaid
+sequenceDiagram
+    客戶端->>CardManager.cs: 按下按鈕
+	CardManager.cs->>CardManager.cs: AddCard()
+	CardManager.cs->>CardManager.cs: OnTransformChildrenChanged()
+	CardManager.cs->>CardManager.cs: ChangeCardPosition(int _childNum)
+    Note right of CardManager.cs: "將Position用for迴圈加入到PosList"
+    
+    CardManager.cs->>BasicCard.cs: EventHanlder.CallCardUpdeatePosition()	
+	CardManager.cs->>其他腳本: 
+    BasicCard.cs->>BasicCard.cs: "取得'CardManager.cs'的PosList[id]並將它設成坐標"
+    
+	BasicCard.cs-->>客戶端: UI
 ```
 
+### 腳本流程
 ```mermaid
 
 graph TB

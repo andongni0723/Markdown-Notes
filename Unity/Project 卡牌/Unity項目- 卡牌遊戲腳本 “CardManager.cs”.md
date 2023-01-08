@@ -18,27 +18,25 @@ BasicCard.cs->BasicCard.cs: 取得\n'CardManager.cs'的PosList[id]\n並將它設
 BasicCard.cs-->客戶端: UI
 ```
 
-```flow
-addCard=>start: AddCard()
-end=>end: End
-onChanged=>subroutine: OnTransformChildrenChanged()
+```mermaid
 
-isChildNumChanged=>condition: 是子集數量發生改變嗎？
-ChangedCardPos=>subroutine: ChangeCardPosition(int _childNum)
-
-init=>operation: 初始化變數
-getLeftPos=>operation: 取得最左邊的卡牌坐標
-forLoop=>condition: for i in range(子集數量)
-addCardPos=>operation: 添加卡牌坐標到PosList
-iPP=>operation: i++
-event=>subroutine: 呼叫事件'CallCardUpdeatePosition()'
-
-
-addCard->onChanged(right)-->isChildNumChanged
-isChildNumChanged(yes)->ChangedCardPos
-ChangedCardPos(right)->init->getLeftPos->forLoop
-forLoop(yes)->addCardPos->iPP(left)->forLoop
-forLoop(no)->event->end
+graph TB
+    start("AddCard()")-->f1[["OnTransformChildrenChanged()"]]
+    
+    subgraph "OnTransformChildrenChanged()"
+        f1
+        -->q1[/"是子集數量發生改變嗎？"/]
+        q1--yes-->f2[["ChangeCardPosition(int _childNum)"]]
+        
+        subgraph "ChangeCardPosition(int _childNum)"
+        f2-->m1[初始化變數]-->m2[取得最左邊的卡牌坐標]-->l1{{"for i in range(子集數量)"}}
+        --yes-->m3[添加卡牌坐標到PosList]-->l1
+        l1--no-->f3[["呼叫事件'CallCardUpdeatePosition()'"]]
+        end
+    end
+    
+    f3-->end1(End)
+    
 ```
 ---
 ## 程式

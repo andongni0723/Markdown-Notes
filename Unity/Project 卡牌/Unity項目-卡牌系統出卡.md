@@ -9,21 +9,19 @@
  ![](https://i.imgur.com/wGFRFG6.png)
 ```mermaid
 sequenceDiagram
+    客戶端->>BasicCard.cs: 打出卡牌
+    BasicCard.cs->>BasicCard.cs:EventAtCardEndDrag()
+    BasicCard.cs->>EventHandler.cs: EventHanlder.CallCardEndDrag()
     
+    EventHandler.cs->>GridMouseManager.cs: Action 關閉Mouse判定
+    EventHandler.cs->>BasicCard.cs: Func<CardDetail_SO> EndDragCardUpdateData
+    BasicCard.cs-->>EventHandler.cs: return 'CardDetail_SO'
+    EventHandler.cs->>GridManager.cs: Func<List<ConfirmGrid>> EndDragGridUpdateData
+    GridManager.cs-->>EventHandler.cs: return 'List<ConfirmGrid>'
+    EventHandler.cs->>GameManager.cs: Data
     
+    Note right of GameManager.cs: "Next..."
+```
 
-```
-```mermaid
-sequenceDiagram
-    Note left of 客戶端: "觸碰"
-    客戶端->>BasicCard.cs: 鼠標碰到卡牌
-    BasicCard.cs->>BasicCard.cs: OnPointerEnter(PointerEventData eventData)
-    BasicCard.cs-->>客戶端: UI
-    Note left of 客戶端: "點擊"
-    客戶端->>BasicCard.cs: 鼠標點擊卡牌
-    BasicCard.cs->>BasicCard.cs: OnPointerEnter(PointerEventData eventData)
-    BasicCard.cs->>EventHanlder.cs: 事件 "CallCardOnClick(image.sprite)"
-    其他腳本-->>客戶端: UI
-```
 
 ### 小流程

@@ -6,7 +6,7 @@
 
 ### 大流程
 
- ![](https://i.imgur.com/wGFRFG6.png)
+ ![](https://i.imgur.com/ETnhMO5.png)
 ```mermaid
 sequenceDiagram
     客戶端->>BasicCard.cs: 打出卡牌
